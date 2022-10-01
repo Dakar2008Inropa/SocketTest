@@ -57,6 +57,7 @@
       this.textBox1.Size = new System.Drawing.Size(512, 31);
       this.textBox1.TabIndex = 1;
       this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
       this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
       // 
       // textBox2

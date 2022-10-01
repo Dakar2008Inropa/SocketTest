@@ -107,7 +107,9 @@ namespace Common
         await await Task.WhenAny(connectTask, cancelTask);
         if (cancelTask.IsCompleted)
         {
+          sw.Stop();
           DebugHelper($"Failed to connect!");
+          DebugHelper($"Failed in {sw.ElapsedMilliseconds}ms");
           return;
         }
         DebugHelper($"Connected to Host");
